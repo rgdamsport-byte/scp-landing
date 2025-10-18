@@ -19,7 +19,12 @@
     header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
     .head{height:64px;display:flex;align-items:center;justify-content:space-between}
     .brand{display:flex;gap:10px;align-items:center;font-weight:800;color:var(--deep)}
-    .logo{width:36px;height:36px;border-radius:8px;background:var(--deep)}
+  .logo{
+  height:36px;
+  width:auto;
+  border-radius:8px; /* kannst du löschen, falls du keine runden Ecken willst */
+  object-fit:contain;
+}
     nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:600}
     nav a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:700;text-decoration:none}
@@ -82,7 +87,7 @@
   <!-- Header -->
   <header>
     <div class="wrap head">
-      <div class="brand"><div class="logo" aria-hidden></div> SC Poppenbüttel <span style="color:#666">2013</span></div>
+      <div class="brand"><img class="logo" src="scp-logo.svg" alt="SC Poppenbüttel logo"> SC Poppenbüttel <span style="color:#666">2013</span></div>
       <nav aria-label="Primary">
         <a href="#about">About</a>
         <a href="#values">Values</a>
