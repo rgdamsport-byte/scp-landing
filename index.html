@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SC Poppenbüttel 2013 — Youth Football in Hamburg</title>
+  <meta name="description" content="SC Poppenbüttel 2013 — performance-oriented youth football team in Hamburg. Join a trial training or become a sponsor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#CE3C10; --green:#135600; --deep:#103A00; --gold:#C8B640; --light:#F7F7F7; --text:#111111;
+      --max: 1120px;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family: Lato, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;color:var(--text);}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .head{height:64px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:800;color:var(--deep)}
+    .logo{width:36px;height:36px;border-radius:8px;background:var(--deep)}
+    nav a{margin-left:18px;text-decoration:none;color:#333;font-weight:600}
+    nav a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;font-weight:700;text-decoration:none}
+    .btn-primary{background:var(--red);color:#fff}
+    .btn-outline{border:2px solid var(--gold);color:var(--gold);background:transparent}
+
+    /* sections */
+    section{padding:96px 0}
+    h1,h2{font-family: Montserrat, system-ui, sans-serif}
+    h1{font-size: clamp(36px, 6vw, 64px);line-height:1.1;margin:0 0 16px}
+    h2{font-size: clamp(28px, 4vw, 40px);line-height:1.2;margin:0}
+    p{line-height:1.7}
+
+    /* hero */
+    .hero{position:relative;isolation:isolate;color:#fff;padding:120px 0}
+    .hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;z-index:-2}
+    .hero::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5);z-index:-1}
+    .hero p{color:rgba(255,255,255,.9);font-size:clamp(16px,2.2vw,20px)}
+    .hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+    /* two-col */
+    .row{display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+    @media (max-width: 880px){.row{grid-template-columns:1fr}}
+
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}
+    .fact{border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:12px}
+
+    .values{background:var(--light)}
+    .values p{max-width:760px;margin:12px auto 0;text-align:center}
+    .values-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:36px}
+    @media (max-width: 880px){.values-grid{grid-template-columns:1fr 1fr}}
+    .value{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start}
+    .tick{width:20px;height:20px;color:var(--green);flex:0 0 20px}
+
+    .diagram{position:relative;height:300px;border:1px solid rgba(0,0,0,.1);border-radius:16px;overflow:hidden}
+    .diagram::after{content:"";position:absolute;inset:0;background:var(--deep);opacity:.06}
+
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+    @media (max-width: 680px){.cards{grid-template-columns:1fr}}
+
+    .join .bar{height:4px;width:64px;background:var(--gold);border-radius:999px;margin-bottom:16px}
+
+    .sponsors{position:relative}
+    .sponsors::before{content:"";position:absolute;inset:0;background:var(--green);opacity:.08;z-index:-1}
+
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px}
+    @media (max-width: 880px){.gallery-grid{grid-template-columns:1fr 1fr}}
+    .gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:16px}
+
+    .contact{background:var(--light)}
+    .card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:18px;box-shadow:0 6px 20px rgba(0,0,0,.06);padding:20px}
+
+    footer{background:var(--deep);color:#fff}
+    .foot{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .foot a{color:#fff;text-decoration:none}
+    .foot a:hover{text-decoration:underline;text-underline-offset:4px}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="wrap head">
+      <div class="brand"><div class="logo" aria-hidden></div> SC Poppenbüttel <span style="color:#666">2013</span></div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#values">Values</a>
+        <a href="#philosophy">Philosophy</a>
+        <a href="#join">Join</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="btn btn-primary" style="margin-left:16px">Join the Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <h1>Together We Grow. Together We Win.</h1>
+      <p>SC Poppenbüttel 2013 — where passion meets purpose. Developing young talents in Hamburg with the methodology inspired by FC Barcelona.</p>
+      <div class="actions">
+        <a href="#join" class="btn btn-primary">⚽ Sign Up for a Trial Training</a>
+        <a href="#sponsors" class="btn btn-outline">🤝 Become a Sponsor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap row">
+      <div>
+        <h2 style="color:var(--deep)">Who We Are</h2>
+        <p style="margin-top:16px">SC Poppenbüttel 2013 is a performance-oriented youth team competing in Hamburg’s Bezirksliga. Our mission is to develop complete players — technically skilled, tactically intelligent, and emotionally strong — following the FC Barcelona methodology (Paco Seirul·lo). We combine fun, structure, and ambition to help every child grow both as a player and as a person.</p>
+        <div class="facts">
+          <div class="fact"><strong>⚽ Training</strong><div>3x weekly sessions</div></div>
+          <div class="fact"><strong>🧠 Development</strong><div>Holistic, player-first</div></div>
+          <div class="fact"><strong>🤝 Community</strong><div>Respect & teamwork</div></div>
+          <div class="fact"><strong>📍 Location</strong><div>Poppenbüttel, Hamburg</div></div>
+        </div>
+      </div>
+      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <img src="https://images.unsplash.com/photo-1521417531039-6949f3f9f2f4?q=80&w=1887&auto=format&fit=crop" alt="Training action" style="border-radius:16px;height:180px;object-fit:cover;width:100%">
+        <img src="https://images.unsplash.com/photo-1518600575200-48cae41bba50?q=80&w=1974&auto=format&fit=crop" alt="Team huddle" style="border-radius:16px;height:180px;object-fit:cover;width:100%">
+        <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac149b?q=80&w=1974&auto=format&fit=crop" alt="Match moment" style="border-radius:16px;height:180px;object-fit:cover;width:100%">
+        <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=1974&auto=format&fit=crop" alt="Coach with players" style="border-radius:16px;height:180px;object-fit:cover;width:100%">
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section id="values" class="values">
+    <div class="wrap">
+      <div style="text-align:center">
+        <h2 style="color:var(--deep)">Our Values — The Heart of Our Team</h2>
+        <p>Football is a space to grow as people, not just as players. These values guide us on and off the pitch.</p>
+      </div>
+      <div class="values-grid">
+        <!-- values list -->
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Friendship</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Communication</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tolerance to frustration</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Responsibility</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Effort</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Dignity</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Respect</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Integration</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Leadership</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Courage</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Know how to play competitively but respectfully</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Sportsmanship</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Confidence</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Solidarity</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Desire to succeed</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Commitment</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Honesty</div>
+        <div class="value"><svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20 6L9 17l-5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Teamwork</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section id="philosophy">
+    <div class="wrap row">
+      <div>
+        <h2 style="color:var(--deep)">Our Training Philosophy</h2>
+        <p style="margin-top:16px">We train with purpose. Every session combines technical precision, cognitive development, and creativity through Preferential Simulation Situations (PSS) — small-sided, game-like scenarios inspired by FC Barcelona’s methodology. Players learn to think, move, and decide faster while understanding space, teammates, and the ball.</p>
+        <div class="cards">
+          <div class="fact">PSS-based micro-cycles</div>
+          <div class="fact">Decision-making under pressure</div>
+          <div class="fact">Ball management & spatial awareness</div>
+          <div class="fact">Creativity & game intelligence</div>
+        </div>
+      </div>
+      <div class="diagram">
+        <svg viewBox="0 0 400 300" width="100%" height="100%">
+          <rect x="10" y="10" width="380" height="280" rx="16" fill="none" stroke="#8CA67A" stroke-dasharray="8 8" />
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto" markerUnits="strokeWidth">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#666" />
+            </marker>
+          </defs>
+          <circle cx="80" cy="70" r="10" fill="var(--red)" />
+          <circle cx="320" cy="70" r="10" fill="var(--red)" />
+          <circle cx="200" cy="150" r="10" fill="var(--red)" />
+          <circle cx="80" cy="230" r="10" fill="var(--red)" />
+          <circle cx="320" cy="230" r="10" fill="var(--red)" />
+          <circle cx="200" cy="40" r="10" fill="var(--green)" />
+          <circle cx="200" cy="260" r="10" fill="var(--green)" />
+          <circle cx="40" cy="150" r="10" fill="var(--green)" />
+          <circle cx="360" cy="150" r="10" fill="var(--green)" />
+          <path d="M80,70 C120,110 160,120 200,150" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+          <path d="M200,150 C260,150 300,110 320,70" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+          <path d="M320,230 C260,210 240,180 200,150" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join -->
+  <section id="join" class="join">
+    <div class="wrap row">
+      <div>
+        <div class="bar" aria-hidden></div>
+        <h2 style="color:var(--deep)">Be Part of the Journey</h2>
+        <p style="margin-top:16px">Are you born in 2013 and ready to take the next step? Join our training sessions and grow in a high-performance environment full of support, passion, and fun.</p>
+        <p>📅 Weekly training in Poppenbüttel<br>📍 Modern facilities & professional methodology</p>
+        <a href="#contact" class="btn btn-primary">⚽ Sign Up for a Trial Training</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1459865264687-595d652de67e?q=80&w=1964&auto=format&fit=crop" alt="Youth football training" style="border-radius:16px;height:300px;object-fit:cover;width:100%">
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  <section id="sponsors" class="sponsors">
+    <div class="wrap row">
+      <div>
+        <h2 style="color:var(--deep)">Support the Future of Football</h2>
+        <p style="margin-top:16px">Your sponsorship helps fund training equipment, tournament participation, and team logistics. We offer brand visibility on kits and banners, social media mentions, and engagement with local families and the community.</p>
+        <div class="cards">
+          <div class="fact">Kit Branding</div>
+          <div class="fact">Social Media</div>
+          <div class="fact">Community Events</div>
+          <div class="fact">Local Partnerships</div>
+        </div>
+        <a href="#contact" class="btn btn-outline" style="margin-top:16px;color:var(--deep)">🤝 Become a Sponsor</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?q=80&w=1974&auto=format&fit=crop" alt="Team with sponsor banner" style="border-radius:16px;height:300px;object-fit:cover;width:100%">
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="wrap" style="text-align:center">
+      <h2 style="color:var(--deep)">The Team in Action</h2>
+      <div class="gallery-grid">
+        <img src="https://picsum.photos/seed/scp1/800/600" alt="Team moment 1">
+        <img src="https://picsum.photos/seed/scp2/800/600" alt="Team moment 2">
+        <img src="https://picsum.photos/seed/scp3/800/600" alt="Team moment 3">
+        <img src="https://picsum.photos/seed/scp4/800/600" alt="Team moment 4">
+        <img src="https://picsum.photos/seed/scp5/800/600" alt="Team moment 5">
+        <img src="https://picsum.photos/seed/scp6/800/600" alt="Team moment 6">
+      </div>
+      <p style="margin-top:12px;color:#666;font-style:italic">“Football is joy and challenge — every session is a step forward.”</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div style="text-align:center">
+        <h2 style="color:var(--deep)">Get in Touch</h2>
+      </div>
+      <div class="card wrap" style="max-width:720px;margin-top:24px">
+        <div class="row" style="grid-template-columns:1fr 1fr">
+          <div><strong>📍 Poppenbüttel, Hamburg</strong></div>
+          <div><strong>📧 rgdamsport@googlemail.com</strong></div>
+          <div><strong>📞 0176 240 39918</strong></div>
+          <div style="color:#666">Have questions or want to join the team? Write us directly or click the button.</div>
+        </div>
+        <a href="mailto:rgdamsport@googlemail.com?subject=SCP%202013%20-%20Trial%20Training%20Inquiry" class="btn btn-primary" style="margin-top:16px;display:inline-flex">📩 Contact Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap" style="padding:36px 0">
+      <div class="foot">
+        <div style="display:flex;align-items:center;gap:10px"><div class="logo" style="background:rgba(255,255,255,.3)" aria-hidden></div> <strong>© 2025 SC Poppenbüttel 2013</strong></div>
+        <div style="opacity:.85">Developing the next generation of footballers.</div>
+        <div style="display:flex;gap:16px;font-weight:600">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
