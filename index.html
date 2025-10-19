@@ -82,6 +82,48 @@
     .foot{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
     .foot a{color:#fff;text-decoration:none}
     .foot a:hover{text-decoration:underline;text-underline-offset:4px}
+    /* ===== Players Banner (marquee) ===== */
+.players-band{
+  background: var(--light);
+  padding: 28px 0;
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  overflow: hidden;
+}
+.marquees{
+  display: grid;
+  gap: 12px;
+}
+.marquee{
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+}
+.marquee__group{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  animation: scroll 28s linear infinite;
+}
+.marquee--reverse .marquee__group{
+  animation-direction: reverse;
+  animation-delay: -3s; /* slight offset so rows don’t align */
+}
+@keyframes scroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+.avatar{
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ddd;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+@media (max-width: 680px){
+  .avatar{ width: 56px; height: 56px; }
+}
   </style>
 </head>
 <body>
@@ -135,6 +177,73 @@
     </div>
   </section>
 
+<!-- Players Banner -->
+<section class="players-band" aria-label="Our players">
+  <div class="wrap">
+    <div class="marquees">
+
+      <!-- Row 1: left → right (actually we animate content left, so we duplicate the group) -->
+      <div class="marquee">
+        <div class="marquee__group">
+          <!-- Avatars: replace src with your real player images -->
+          <img class="avatar" src="https://i.pravatar.cc/150?img=11" alt="Player 1">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=12" alt="Player 2">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=13" alt="Player 3">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=14" alt="Player 4">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=15" alt="Player 5">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=16" alt="Player 6">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=17" alt="Player 7">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=18" alt="Player 8">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=19" alt="Player 9">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=20" alt="Player 10">
+        </div>
+        <!-- duplicate for seamless loop -->
+        <div class="marquee__group" aria-hidden="true">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=11" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=12" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=13" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=14" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=15" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=16" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=17" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=18" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=19" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=20" alt="">
+        </div>
+      </div>
+
+      <!-- Row 2: right → left -->
+      <div class="marquee marquee--reverse">
+        <div class="marquee__group">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=31" alt="Player 11">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=32" alt="Player 12">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=33" alt="Player 13">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=34" alt="Player 14">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=35" alt="Player 15">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=36" alt="Player 16">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=37" alt="Player 17">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=38" alt="Player 18">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=39" alt="Player 19">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=40" alt="Player 20">
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=31" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=32" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=33" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=34" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=35" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=36" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=37" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=38" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=39" alt="">
+          <img class="avatar" src="https://i.pravatar.cc/150?img=40" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
   <!-- Values -->
   <section id="values" class="values">
     <div class="wrap">
